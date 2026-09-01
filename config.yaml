@@ -1,0 +1,28 @@
+watched_folders:
+  - "./sample_docs"
+
+chunking:
+  target_tokens: 650
+  overlap_ratio: 0.15
+
+ocr:
+  dpi: 300
+  lang: "eng"
+  min_text_chars_threshold: 20
+  tesseract_cmd: "C:/Program Files/Tesseract-OCR/tesseract.exe"
+
+embeddings:
+  provider: "voyage"
+  model: "voyage-3"
+  batch_size: 128
+
+search:
+  fts_top_k: 50
+  vector_top_k: 50
+  rrf_k: 60
+  results_limit: 20
+  # Minimum cosine similarity for a semantic/vector match to be shown at all —
+  # without this, vector search always returns its top_k nearest chunks even
+  # when none are actually relevant to the query. Tune to your corpus: too high
+  # drops genuine matches, too low lets unrelated chunks back in.
+  min_vector_score: 0.3

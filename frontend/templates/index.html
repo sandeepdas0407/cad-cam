@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CAD-CAM Document Search</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>CAD-CAM Document Search</h1>
+    <div class="index-bar">
+      <button id="reindex-btn">Reindex</button>
+      <span id="index-status">Idle</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search documents..." autocomplete="off">
+      <button id="search-btn">Search</button>
+      <select id="search-type">
+        <option value="hybrid">Hybrid</option>
+        <option value="keyword">Keyword</option>
+        <option value="semantic">Semantic</option>
+      </select>
+      <label><input type="checkbox" class="doc-type-filter" value="pdf" checked> PDF</label>
+      <label><input type="checkbox" class="doc-type-filter" value="docx" checked> Word</label>
+    </div>
+
+    <ul id="results"></ul>
+  </main>
+
+  <script src="/static/js/search.js"></script>
+</body>
+</html>
