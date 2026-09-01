@@ -1,5 +1,9 @@
 # CAD-CAM Document Search
 
+[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
+[![FastAPI](https://img.shields.io/badge/framework-FastAPI-009688.svg)](https://fastapi.tiangolo.com/)
+[![Tests](https://img.shields.io/badge/tests-pytest-0A9EDC.svg)](#tests)
+
 Local web app for searching CAD/CAM PDFs (text and scanned) and Word documents, combining full-text keyword search with Voyage AI semantic search.
 
 ## Setup
